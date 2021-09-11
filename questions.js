@@ -61,7 +61,8 @@ function HowManyPairs(shoes) {
       R++
     else L++
   }
-  return ([R,L])
+  let sum=((R>L)? R-L:L-R)
+  return ((sum==0)?R:sum)
 }
 console.log(HowManyPairs("RLRLRRLL"));
 
