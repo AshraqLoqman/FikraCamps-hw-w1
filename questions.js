@@ -54,16 +54,17 @@ console.log(
  */
 
 function HowManyPairs(shoes) {
-  let R=0
-  let L=0
-  for (var i = 0; i < shoes.length; i++) {
-    if(shoes[i]==='R')
-      R++
-    else L++
+    let R=0
+    let L=0
+    for (var i = 0; i < shoes.length; i++) {
+      if(shoes[i]==='R') R++
+      else L++
+    }
+    console.log('L => '+L)
+    console.log('R => '+R)
+    return ((R==L)?R:(R>L)?L-Math.abs(R-L):R-Math.abs(L-R))
   }
-  return ((R==L)?R:((R>L)? R-L:L-R))
-}
-console.log(HowManyPairs("RLRLRRLL"));
+  console.log(HowManyPairs("RLRLRRLL"));
 
 /** Q4
  *    Write a function that takes a string and return JSON of all the letters and its count. check the example to know more
